@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffee026d;
+    backdrop-filter: blur(10px);
+    color: #000;
+}
+
+.flex {
+    display: flex;
+}
+
+.around {
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: linear-gradient(to right, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.a {
+    position: relative;
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    font-size: 1.2rem;
+    margin: 0 8px;
+    padding: 4px;
+    transition: color 0.3s ease-in-out;
+}
+
+.a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.a:hover::after {
+    width: 100%;
+}
+.medel {
+    display: flex;
+    align-items: center;
+}
+.mobile {
+    display: none;
+}
+.pc {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
