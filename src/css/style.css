@@ -12,7 +12,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #ffee026d;
+    background-color: #ffee00aa;
     backdrop-filter: blur(10px);
     color: #000;
 }
@@ -39,11 +39,11 @@ body {
 .a {
     position: relative;
     text-decoration: none;
-    color: rgb(71, 71, 71);
     font-size: 1.2rem;
     margin: 0 8px;
     padding: 4px;
     transition: color 0.3s ease-in-out;
+    color: #383838b3;
 }
 
 .a::after {
@@ -53,7 +53,7 @@ body {
     bottom: 0;
     height: 2px;
     width: 0%;
-    background: black;
+    background: rgb(0, 0, 0);
     transition: width 0.3s ease-in-out;
 }
 
@@ -64,23 +64,103 @@ body {
 .a:hover::after {
     width: 100%;
 }
+
 .medel {
     display: flex;
     align-items: center;
 }
+
 .mobile {
     display: none;
 }
+
 .pc {
     display: block;
 }
 
+.icon {
+    font-size: larger;
+    color: #000000;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.icon:hover{
+    box-shadow: 0 0 100px black;
+}
+
+.menuBtn {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pcFlex {
+    display: flex;
+}
+.vcc{
+    display: none;
+}
+
+.content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background-image: url('https://www.gallerywallsmadeeasy.com/cdn/shop/collections/Gallery-Walls-Made-Easy-Travel_1400x.jpg?v=1654616583');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* সুন্দর সাদা/কালো ব্লার ব্যাকগ্রাউন্ড */
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background-color: rgba(76, 76, 76, 0.4); /* Dark blur overlay */
+    z-index: 1;
+}
+
+/* ভিতরের কনটেন্ট যেন ব্লারের ওপর দেখা যায় */
+.content > * {
+    position: relative;
+    z-index: 2;
+   
+}
+
+
 @media (max-width: 768px) {
-    .pc {
+
+    .pc,
+    .pcFlex {
         display: none;
     }
+
 
     .mobile {
         display: block;
     }
+    .sideMenu{
+    height: auto;
+    position: fixed ;
+    top: 5px;
+    right: 25px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.568);
+    width: auto;
+    padding: 50px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid #00000051;
+
+}
 }
