@@ -86,7 +86,8 @@ body {
     cursor: pointer;
     transition: all 0.3s;
 }
-.icon:hover{
+
+.icon:hover {
     box-shadow: 0 0 100px black;
 }
 
@@ -100,45 +101,53 @@ body {
 .pcFlex {
     display: flex;
 }
-.vcc{
+
+.vcc {
     display: none;
 }
 
 .content {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-
+    flex-direction: column;
     background-image: url('https://www.gallerywallsmadeeasy.com/cdn/shop/collections/Gallery-Walls-Made-Easy-Travel_1400x.jpg?v=1654616583');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     position: relative;
     overflow: hidden;
 }
 
-/* সুন্দর সাদা/কালো ব্লার ব্যাকগ্রাউন্ড */
+
 .content::before {
     content: "";
     position: absolute;
     inset: 0;
     backdrop-filter: blur(6px);
-    background-color: rgba(76, 76, 76, 0.4); /* Dark blur overlay */
+    background-color: rgba(76, 76, 76, 0.4);
     z-index: 1;
 }
 
-/* ভিতরের কনটেন্ট যেন ব্লারের ওপর দেখা যায় */
-.content > * {
+
+.content>* {
     position: relative;
     z-index: 2;
-   
+
+}
+.txbox{
+    color: #fff;
+    text-align: center;
+    width: 50%;
 }
 
 
 @media (max-width: 768px) {
+    .txbox{
+        width: 100%;
+    }
 
     .pc,
     .pcFlex {
@@ -149,18 +158,19 @@ body {
     .mobile {
         display: block;
     }
-    .sideMenu{
-    height: auto;
-    position: fixed ;
-    top: 5px;
-    right: 25px;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.568);
-    width: auto;
-    padding: 50px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 1px solid #00000051;
 
-}
+    .sideMenu {
+        height: auto;
+        position: fixed;
+        top: 5px;
+        right: 25px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.568);
+        width: auto;
+        padding: 50px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 1px solid #00000051;
+
+    }
 }
