@@ -431,7 +431,9 @@ body {
 
 
 
-
+.sideMenu{
+   backdrop-filter: blur(10px);
+}
 @media (max-width: 768px) {
     .txbox {
         width: 100%;
@@ -453,11 +455,11 @@ body {
         top: 5px;
         right: 25px;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.568);
+        background-color: rgba(255, 255, 255, 0.783);
         width: auto;
         padding: 50px;
         border-radius: 10px;
-        backdrop-filter: blur(10px);
+       
         border: 1px solid #00000051;
 
     }
