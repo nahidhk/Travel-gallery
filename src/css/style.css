@@ -113,7 +113,6 @@ body {
     justify-content: center;
     padding: 20px;
     flex-direction: column;
-    background-image: url('https://www.gallerywallsmadeeasy.com/cdn/shop/collections/Gallery-Walls-Made-Easy-Travel_1400x.jpg?v=1654616583');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -166,10 +165,27 @@ body {
     color: #fff;
 
 }
+.button{
+  font-family: 'Titillium Web', sans-serif;
+  height: 40px;
+  width: auto;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: #ffffff00;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 100px rgb(255, 255, 255);
+}
 
+.button:hover {
 
-
-
+  background-color: #ffffff;
+  color: black;
+   box-shadow: 0 0 1px rgb(255, 255, 255);
+}
 
 
 
