@@ -9,5 +9,10 @@
  Client : Mizan
  Developer : Nahid TD
  Budget : --
+----------------------------------------
+Akhene sob data ke MySQL theke load kora hoyeche , and sei data ke filter kore use kora hoiche tau seta PHP diye jemon 
+``` <?php echo $row['data_parametar'] ?> ```
+tobe ata sob tabel er jnno na kintu ,,, atake ami use korchi age theke redday kore .
+
  
  
