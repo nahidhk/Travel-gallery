@@ -15,7 +15,7 @@ $welcome_note = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi d
         </p>
         <br><br><br>
         <button class="button">
-            Click Me
+        
            <?php include 'button.php' ?>
         </button>
 
