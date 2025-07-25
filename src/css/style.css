@@ -192,11 +192,13 @@ body {
 .footer{
     background-color: #000000;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    padding: 20px 0 20px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+.textCenter {
+    text-align: center;
 }
 @media (max-width: 768px) {
     .txbox {
