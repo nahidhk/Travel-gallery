@@ -186,11 +186,17 @@ body {
   color: black;
    box-shadow: 0 0 1px rgb(255, 255, 255);
 }
-
-
-
 .sideMenu{
    backdrop-filter: blur(10px);
+}
+.footer{
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 @media (max-width: 768px) {
     .txbox {

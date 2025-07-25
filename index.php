@@ -37,6 +37,13 @@ $conn->close();
     <!--  -->
 
 
+
+
+
+    <!-- Footer -->
+    <?php include 'components/footer.php'; ?>
+
+
     <!-- JavaScript -->
 
 
