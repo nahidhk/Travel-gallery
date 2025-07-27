@@ -17,7 +17,8 @@ $welcome_image = "https://www.gallerywallsmadeeasy.com/cdn/shop/collections/Gall
         </p>
         <br><br><br>
         <button onclick="location.href='Gallery'" class="button">
-            View Gallery &nbsp;
+           <span> View Gallery </span>
+          &nbsp;
             <i class="fa-solid fa-arrow-right"></i>
         </button>
 
