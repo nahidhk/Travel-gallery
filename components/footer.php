@@ -1,3 +1,8 @@
+
+
+
+
+
 <footer class="footer">
     <div class="mdflex around">
         <div style="text-align: center;">
@@ -9,19 +14,39 @@
             </p>
         </div>
         <div>
-           <div>
-           <blockquote>
-            address
-           </blockquote>
-           </div>
+            <div>
+                <blockquote>
+                    <div class="flex row">
+                        <div class="callBtn">
+                            <span class="iconS">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <span class="string">
+                                <?php echo $row['phone'] ?>
+                            </span>
+                        </div>
+                        <div class="callBtn">
+                            <span class="iconS">
+                               <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <span class="string">
+                                <?php echo $row['email'] ?>
+                            </span>
+                        </div>
+                        <div class="callBtn">
+                            <span class="iconS">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <span class="string">
+                                <?php echo $row['location'] ?>
+                            </span>
+                        </div>
+                    </div>
+
+                </blockquote>
+            </div>
         </div>
     </div>
-
-
-
-
-
-
-
-    <p class="textCenter">Copyright&copy; <?php echo date("Y"); ?> <?php echo $row['site_name']; ?>. All rights reserved.</p>
+    <p class="textCenter">Copyright&copy; <?php echo date("Y"); ?> <?php echo $row['site_name']; ?>. All rights
+        reserved.</p>
 </footer>

@@ -89,6 +89,7 @@ body {
 
 .icon:hover {
     box-shadow: 0 0 100px black;
+    transform: rotate(360deg);
 }
 
 .menuBtn {
@@ -199,6 +200,26 @@ body {
 }
 .textCenter {
     text-align: center;
+}
+.row{
+    flex-direction: column;
+}
+.callBtn {
+   margin: 5px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   width: 50%;
+   color: #eee;
+}
+.callBtn:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+.callBtn:active{
+    transform: scale(0.2);
+}
+.iconS{
+    color: #eee;
 }
 @media (max-width: 768px) {
     .txbox {
