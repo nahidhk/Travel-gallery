@@ -233,6 +233,67 @@ body {
     color: #eee;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+   
+}
+.picBox {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 100px 0 #fff;
+    filter: grayscale(100%);
+  
+}
+.picBox:hover {
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    position: relative;
+    z-index: 10;
+    filter: none;
+  
+}
+.picBox .pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.picBox:hover .pic {
+    transform: scale(1.3);
+}
+.galleryText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: #fff;
+    text-align: center;
+    display: none;
+    animation: mijan 0.5s;
+}
+@keyframes mijan {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.picBox:hover .galleryText {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .txbox {
         width: 100%;

@@ -30,14 +30,14 @@ $conn->close();
     <!-- Install Nav -->
     <?php include 'components/nav.php'; ?>
 
-<!-- Cursore -->
- <?php include 'components/cursore.php' ?>
+    <!-- Cursore -->
+    <?php include 'components/cursore.php' ?>
 
 
     <!--  -->
+    <!-- into install gallery -->
 
-
-
+    <?php include 'components/gallery_pg.php'; ?>
 
 
     <!-- Footer -->
