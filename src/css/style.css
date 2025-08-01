@@ -233,41 +233,74 @@ body {
     color: #eee;
 }
 
+
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+
+    align-items: center;
     gap: 10px;
-    justify-content: center;
     padding: 20px;
-   
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
 }
+
+.galleryWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.galleryWrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(to right, rgba(51, 51, 51, 0.754), transparent 20%),
+        linear-gradient(to left, rgba(51, 51, 51, 0.754), transparent 20%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+
+
+
 .picBox {
+    flex-shrink: 0;
     width: 200px;
     height: 300px;
     overflow: hidden;
     border-radius: 10px;
-    position: relative;
     transition: all 0.3s ease;
-    box-shadow: 0 0 100px 0 #fff;
+    box-shadow: 0 0 10px 0 #fff;
     filter: grayscale(100%);
-  
+
 }
+
 .picBox:hover {
-    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0);
     position: relative;
     z-index: 10;
     filter: none;
-  
+
 }
+
 .picBox .pic {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+
 .picBox:hover .pic {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
+
 .galleryText {
     position: absolute;
     bottom: 0;
@@ -279,20 +312,39 @@ body {
     text-align: center;
     display: none;
     animation: mijan 0.5s;
+    cursor: pointer;
 }
+
+.title_big {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+}
+
 @keyframes mijan {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .picBox:hover .galleryText {
     display: block;
 }
+
+
+
+
+
 
 @media (max-width: 768px) {
     .txbox {
